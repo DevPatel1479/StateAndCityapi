@@ -67,5 +67,5 @@ app.post('/api/data', (req, res) => {
 // Set up server to listen on port 3000
 const PORT = process.env.PORT || 7009;
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server is running on http://0.0.0.0:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
