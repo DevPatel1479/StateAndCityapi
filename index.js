@@ -46,7 +46,10 @@ app.post('/city-api', async (req, res) => {
             arrray.push(district.district_name);
         });
         console.log(arrray);
-        res.json(response.data);  // Return the data to the frontend
+        const data = {
+            "districts" : arrray
+        };
+        res.json(data);  // Return the data to the frontend
     } catch (error) {
         console.error('Error fetching districts:', error);
         res.status(500).json({ error: 'Failed to fetch districts' });
